@@ -1,9 +1,12 @@
 const SignUp = require('../Group Chat Models/signupData.js');
-const groupChatMsgs=require('../Group Chat Models/groupChatMsgs.js');
+const groupChatMsgs = require('../Group Chat Models/groupChatMsgs.js');
+const groupTable = require('../Group Chat Models/groupTable.js');
+const usergroupTable = require('../Group Chat Models/usergroupTable.js');
 let dotenv = require('dotenv');
 dotenv.config();
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
+const { response } = require('express');
 exports.addSignUpDetailsInDatabase = (req, res, next) => {
     const { username, email, phone, password } = req.body;
     const saltRounds = 10;
@@ -79,7 +82,7 @@ exports.authenticateUser = (req, res, next) => {
 exports.groupChatMessage = (req, res, next) => {
     const msgs = req.body.msgs;
     groupChatMsgs.create({
-        msgs:msgs,
+        msgs: msgs,
         username: myusername,
         signupEmail: mymail
     }).then(groupChatMsgs => {
@@ -90,15 +93,63 @@ exports.groupChatMessage = (req, res, next) => {
     });
 };
 
-exports.domChatMessage=(req, res, next)=>{
-    groupChatMsgs.findAll({ where: { signupEmail: mymail } }).then(groupChatM=> {
+exports.groupChatDOM = (req, res, next) => {
+    usergroupTable.findAll({where:{signupEmail:mymail}}).then(groupChatMsgs => {
+        console.log(groupChatMsgs);
+        res.send(groupChatMsgs);
+    }).catch(err => {
+        console.log(err);
+    });
+};
+
+exports.addGroupNameInDatabase = (req, res, next) => {
+    const groupName = req.body.groupName;
+    groupTable.create({
+        name_of_group: groupName
+    }).then(groupTable => {
+        console.log(groupTable);
+        res.json(groupTable);
+        usergroupTable.create({
+            signupEmail:mymail,
+            name_of_group:groupName
+        }).then(res=>{
+            console.log(res);
+        }).catch(err=>{
+            console.log(err);
+        });
+    }).catch(err => {
+        console.log(err);
+    });
+};
+
+exports.domChatMessage = (req, res, next) => {
+    groupChatMsgs.findAll({ where: { signupEmail: mymail } }).then(groupChatM => {
         res.send(groupChatM);
     }).catch(err => {
         console.log(err);
     });
 };
 
-exports.domAllChatMessages=(req, res, next)=>{
+exports.addGroupMember= (req, res, next) => {
+    let member_mail=req.body.member_mail;
+    let group_name=req.body.group_name;
+    SignUp.findAll({ where: { signupEmail: member_mail } }).then(()=> {
+        usergroupTable.create({
+            signupEmail:member_mail,
+            name_of_group:group_name
+        }).then(res=>{
+            console.log(res);
+            res.send("User added successfully !");
+        }).catch(err=>{
+            console.log(err);
+        });
+    }).catch(err => {
+        console.log(err);
+        res.send("User does not exist !");
+    });
+};
+
+exports.domAllChatMessages = (req, res, next) => {
     groupChatMsgs.findAll().then(groupChatM => {
         console.log(groupChatM);
         res.json(groupChatM);
@@ -107,10 +158,10 @@ exports.domAllChatMessages=(req, res, next)=>{
     });
 };
 
-exports.domValidateEmailId=(req, res, next)=>{
+exports.domValidateEmailId = (req, res, next) => {
     groupChatMsgs.findAll().then(groupChatM => {
         console.log(groupChatM);
-        res.json({usermail:`${mymail}`});
+        res.json({ usermail: `${mymail}`});
     }).catch(err => {
         console.log(err);
     });

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat</title>
+    <link rel="stylesheet" href="../Group Chat Public/gchat_main.css" />
+</head>
+<body>
+    <div id="dailyexpenses-id-container" class="dailyexpenses-class">
+        <h1 style="text-align:center;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: -40px;">Group Chat</h1>
+        <button id="logoutFrom"
+            style="background-color:blue; border:1px black solid; border-radius:5px;color:white;">LOG
+            OUT</button>
+    </div>
+    <div id="gchat1">
+        <h2 style="color:white;font-family: Arial, Helvetica, sans-serif;">My Groups:-</h2>
+        <div id="grp_name">
+
+        </div>
+    </div>
+    <div id="gchat2">
+        <h2 style="color:white;font-family: Arial, Helvetica, sans-serif;">Create Group</h2>
+        <input type="text" id="grp-name" placeholder="group-name" size="25"/></br>
+        <button id="btn-grp-name"  style="background-color:goldenrod; border:1px black solid; border-radius:5px;color:white;margin-left:8px;">Create</button>
+    </div>
+    <script src="../Group Chat Public/gchat_groups.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+</body>
+</html>

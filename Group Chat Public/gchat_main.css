@@ -149,8 +149,33 @@ button {
     top:20px;
     left:1180px;
 }
-
-
+#gchat1{
+    position: fixed;
+    left:0px;
+    top:0px;
+    background-color: brown;
+}
+#gchat2{
+    position: fixed;
+    text-align: center;
+    right:80px;
+    top:80px;
+    width:250px;
+    height:120px;
+    background-color: blue;
+    padding-left:5px;
+    padding-top:5px;
+    border-radius: 8px;
+}
+#addToGroup{
+    position:relative;
+    left:10px;
+    border:1px solid black;
+    width:250px;
+    height:580px;
+    background-color: blue;
+    z-index:0;
+}
 #myform {
     position: relative;
     top: 20px;
