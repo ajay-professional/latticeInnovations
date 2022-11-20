@@ -1,0 +1,24 @@
+#formId{
+   position:relative;
+   top:150px;
+   left:465px; 
+   height:350px;
+   width:350px;
+   background-color: blueviolet;
+   padding-left: 75px;
+   padding-top: 20px;
+   color:white;
+   border-radius: 8px;
+}
+#formId2{
+   position:relative;
+   top:150px;
+   left:465px; 
+   height:350px;
+   width:350px;
+   background-color: blueviolet;
+   padding-left: 75px;
+   padding-top: 20px;
+   color:white;
+   border-radius: 8px;
+}
