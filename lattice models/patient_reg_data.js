@@ -32,4 +32,5 @@ const patReg = sequelize.define('patReg', {
     }
 });
 
+
 module.exports = patReg;

@@ -79,6 +79,7 @@ exports.hospDetail = (req, res, next) => {
 };
 
 
+
 exports.psychDetail = (req, res, next) => {
     const hosp_id = req.params.hospId;
     psych_name.findAll({

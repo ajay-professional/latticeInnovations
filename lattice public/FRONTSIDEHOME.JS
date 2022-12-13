@@ -23,6 +23,7 @@ fetchBtn1.addEventListener("click", (e) => {
 });
 
 const fetchBtn2 = document.getElementById('detHosp2');
+
 fetchBtn2.addEventListener("click", (e) => {
     axios.get('http://localhost:6611/hospDetail/2').then((response) => {
         document.body.innerHTML = document.body.innerHTML + `<pre><h4>Hospital Name:  ${response.data.hosp_name} , Total Psychiatrist Count:   ${response.data.psych_totalCount} , Total Patients Count:   ${response.data.pat_totalCount}</h4></pre>`;

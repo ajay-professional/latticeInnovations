@@ -77,15 +77,11 @@ button {
     height: 100%;
     padding-top: 50px;
 }
-
 #leaderboard {
     position: relative;
     top: 40px;
     left: 230px;
 }
-
-
-
 .forgotPwd-cls {
     position: relative;
     top: -200px;
