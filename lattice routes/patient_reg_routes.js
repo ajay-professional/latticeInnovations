@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 
 const patientRegController = require('../lattice controllers/patient_reg_cont.js');
-
-
 router.post('/PatientDet', patientRegController.patRegDet);
 
 router.post('/loginByUser', patientRegController.loginByUser);

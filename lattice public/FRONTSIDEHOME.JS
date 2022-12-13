@@ -3,6 +3,7 @@ logoutbtn.addEventListener('click', () => {
     window.location.replace("file:///C:/Users/gulshan/Desktop/ajay-documents/lattice%20views/frontsidelogin.html");
 });
 const fetchBtn1 = document.getElementById('detHosp1');
+
 fetchBtn1.addEventListener("click", (e) => {
     axios.get('http://localhost:6611/hospDetail/1').then((response) => {
         document.body.innerHTML = document.body.innerHTML + `<pre><h4>Hospital Name:  ${response.data.hosp_name} , Total Psychiatrist Count:   ${response.data.psych_totalCount} , Total Patients Count:   ${response.data.pat_totalCount}</h4></pre>`;

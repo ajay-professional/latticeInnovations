@@ -17,7 +17,6 @@ const psych_name = sequelize.define('psych_name', {
         type: Sequelize.INTEGER,
         allowNull: false,
     }
-    
-});
 
+});
 module.exports = psych_name;

@@ -7,7 +7,6 @@ formLogin.addEventListener('submit', (e) => {
         email2,
         password2
     }
-    
     axios.post('http://localhost:6611/loginByUser', obj2).then((response) => {
         sessionStorage.setItem('token', response.data.token);
         localStorage.setItem('user', JSON.stringify(response.data.userData));

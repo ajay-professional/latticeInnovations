@@ -13,7 +13,6 @@ const psych_name = require('./lattice models/psych_name.js');
 const cors = require('cors');
 
 app.use(cors());
-
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));

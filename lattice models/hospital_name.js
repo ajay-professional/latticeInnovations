@@ -22,5 +22,4 @@ const hosp_name = sequelize.define('hosp_name', {
     }
 });
 
-
 module.exports = hosp_name;
