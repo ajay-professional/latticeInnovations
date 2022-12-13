@@ -10,15 +10,15 @@ const patReg = sequelize.define('patReg', {
     addr: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate:{
-            min:10
+        validate: {
+            min: 10
         }
     },
     email2: {
         type: Sequelize.STRING,
         allowNull: false,
-        validate:{
-            isEmail:true
+        validate: {
+            isEmail: true
         },
         primaryKey: true
     },
@@ -26,10 +26,10 @@ const patReg = sequelize.define('patReg', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    pwd:{
+    pwd: {
         type: Sequelize.STRING,
-        allowNull:false,
-    } 
+        allowNull: false,
+    }
 });
 
 module.exports = patReg;

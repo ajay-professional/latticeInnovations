@@ -6,7 +6,7 @@ const hosp_name = sequelize.define('hosp_name', {
     hosp_id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        primaryKey:true
+        primaryKey: true
     },
     hosp_name: {
         type: Sequelize.STRING,
@@ -14,11 +14,11 @@ const hosp_name = sequelize.define('hosp_name', {
     },
     psych_totalCount: {
         type: Sequelize.INTEGER,
-        allowNull:false,
+        allowNull: false,
     },
-    pat_totalCount:{
+    pat_totalCount: {
         type: Sequelize.INTEGER,
-        allowNull:false,
+        allowNull: false,
     }
 });
 

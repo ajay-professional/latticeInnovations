@@ -5,9 +5,9 @@ const sequelize = require('../util/database');
 const psych_name = sequelize.define('psych_name', {
     psych_id: {
         type: Sequelize.INTEGER,
-        allowNull:false,
+        allowNull: false,
         autoIncrement: true,
-        primaryKey:true,
+        primaryKey: true,
     },
     psych_name: {
         type: Sequelize.STRING,
@@ -15,7 +15,7 @@ const psych_name = sequelize.define('psych_name', {
     },
     pat_count: {
         type: Sequelize.INTEGER,
-        allowNull:false,
+        allowNull: false,
     }
 });
 

@@ -14,6 +14,7 @@ forms.addEventListener('submit', (e) => {
         tel,
         pwd
     };
+    
     console.log(obj3);
     axios.post('http://localhost:6611/PatientDet', obj3).then((response) => {
         console.log(response);

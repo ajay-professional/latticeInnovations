@@ -84,6 +84,8 @@ button {
     left: 230px;
 }
 
+
+
 .forgotPwd-cls {
     position: relative;
     top: -200px;
@@ -99,9 +101,9 @@ button {
 }
 
 .noticeofmonths-class {
-    position:fixed;
-    top:200px;
-    left:415px;
+    position: fixed;
+    top: 200px;
+    left: 415px;
     width: 450px;
     height: 150px;
     background-color: rgb(191, 185, 185);

@@ -9,7 +9,7 @@ fetchBtn1.addEventListener("click", (e) => {
         console.log(response.data);
         axios.get('http://localhost:6611/psychDetail/1').then((response) => {
             console.log(response.data);
-            for(let i=0;i<response.data.length;i++){
+            for (let i = 0; i < response.data.length; i++) {
                 document.body.innerHTML = document.body.innerHTML + `<pre><h4>Id:  ${response.data[i].psych_id} ,Psychiatrist Name:   ${response.data[i].psych_name} , Patients Count:   ${response.data[i].pat_count}</h4></pre>`;
             }
         }).catch((err) => {
@@ -29,7 +29,7 @@ fetchBtn2.addEventListener("click", (e) => {
         console.log(response.data);
         axios.get('http://localhost:6611/psychDetail/2').then((response) => {
             console.log(response.data);
-            for(let i=0;i<response.data.length;i++){
+            for (let i = 0; i < response.data.length; i++) {
                 document.body.innerHTML = document.body.innerHTML + `<pre><h4>Id:  ${response.data[i].psych_id} ,Psychiatrist Name:   ${response.data[i].psych_name} , Patients Count:   ${response.data[i].pat_count}</h4></pre>`;
             }
         }).catch((err) => {
@@ -49,7 +49,7 @@ fetchBtn3.addEventListener("click", (e) => {
         console.log(response.data);
         axios.get('http://localhost:6611/psychDetail/3').then((response) => {
             console.log(response.data);
-            for(let i=0;i<response.data.length;i++){
+            for (let i = 0; i < response.data.length; i++) {
                 document.body.innerHTML = document.body.innerHTML + `<pre><h4>Id:  ${response.data[i].psych_id} ,Psychiatrist Name:   ${response.data[i].psych_name} , Patients Count:   ${response.data[i].pat_count}</h4></pre>`;
             }
         }).catch((err) => {
@@ -69,7 +69,7 @@ fetchBtn4.addEventListener("click", (e) => {
         console.log(response.data);
         axios.get('http://localhost:6611/psychDetail/4').then((response) => {
             console.log(response.data);
-            for(let i=0;i<response.data.length;i++){
+            for (let i = 0; i < response.data.length; i++) {
                 document.body.innerHTML = document.body.innerHTML + `<pre><h4>Id:  ${response.data[i].psych_id} ,Psychiatrist Name:   ${response.data[i].psych_name} , Patients Count:   ${response.data[i].pat_count}</h4></pre>`;
             }
         }).catch((err) => {
@@ -89,7 +89,7 @@ fetchBtn5.addEventListener("click", (e) => {
         console.log(response.data);
         axios.get('http://localhost:6611/psychDetail/5').then((response) => {
             console.log(response.data);
-            for(let i=0;i<response.data.length;i++){
+            for (let i = 0; i < response.data.length; i++) {
                 document.body.innerHTML = document.body.innerHTML + `<pre><h4>Id:  ${response.data[i].psych_id} ,Psychiatrist Name:   ${response.data[i].psych_name} , Patients Count:   ${response.data[i].pat_count}</h4></pre>`;
             }
         }).catch((err) => {

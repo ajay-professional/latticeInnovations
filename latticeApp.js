@@ -24,6 +24,7 @@ psych_name.belongsTo(hosp_name, { constraints: true, onDelete: 'CASCADE' });
 hosp_name.hasMany(psych_name);
 
 
+
 sequelize.sync().then(result => {
     console.log(result);
     app.listen(6611);

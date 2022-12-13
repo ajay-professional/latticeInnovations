@@ -23,6 +23,7 @@ formLogin.addEventListener('submit', (e) => {
         if (err.response.status === 401) {
             alert("Incorrect password !");
         }
+        
         if (err.response.status === 404) {
             alert("This user is not registered. Please sign up first !");
         }
